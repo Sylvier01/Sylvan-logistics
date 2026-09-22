@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
-    overflow-x: hidden;
-}
 body{
     display: grid;
     grid-template-rows: auto minmax(min-content, 1fr) auto;
@@ -119,9 +116,10 @@ header{
         max-width: 320px;
         margin: 1em auto;
     }
-    table{
-        width: 100%;
-        min-width: 480px;
+    .table-section table{
+        /* width: fit-content; */
+        width: 40%;
+        /* min-width: 480px; */
     }
     .cart-section{
         flex-direction: column;
@@ -129,8 +127,12 @@ header{
         gap: 2em;
     }
     .cart-html h1{
-        font-size: clamp(1.5rem, 10vw, 2rem);
-        word-break: break-word;
+        font-size: clamp(1.5rem, 10vw, 2rem) !important;
+    }
+    .cart-html h2{
+        font-size: clamp(1rem, 10vw, 1.8rem) !important;
+        text-transform: uppercase;
+        text-decoration: underline;
     }
     .cart-list-section{
         width: auto;
@@ -154,7 +156,6 @@ header{
         flex-direction: column;
         width: 90%;
         max-width: 320px;
-        /* text-align: center; */
         gap: 1em;
     }    
     .contact,
