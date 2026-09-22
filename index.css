@@ -70,17 +70,19 @@ header{
     nav .contact-buttons{
         flex-direction: column;
     }
-    nav .whatsapp-contact-button{
+    .right-aligned-nav .whatsapp-contact-button{
+        width: 140px;
         align-self: flex-start;
         margin:1em 1em -1em 1em;
         gap: 0.2em;
     }
-    nav .call-us-link{
+     .right-aligned-nav .call-us-link{
         align-self: flex-start;
-        width: 50%;
+        width: fit-content;
         white-space: nowrap;
         margin-left: 1em;
         margin-bottom: -0.5em;
+        padding: 0.5em 1em;
     }
     .cart-container{
         align-self: flex-start;
@@ -92,6 +94,9 @@ header{
     .hero-video{
         width: 100%;
         height: auto;
+    }
+    .hero .hero-content{
+        width: fit-content;
     }
     .productPage{
         flex-direction: column;
@@ -122,7 +127,19 @@ header{
         margin: 0 auto;
         width: 60%;
     }
-    
+    .contact .contact-buttons{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+    .contact .whatsapp-contact-button{
+        width: 140px; 
+    }
+    .upper-footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }    
 }
 .header-style-1{
     /* box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 2px 0px rgba(0, 0, 0, 0.06); */
@@ -340,8 +357,9 @@ nav .cart-items-display{
     position: absolute;
     z-index: 1;
     top: 0;
+    left: 4.5em;
     right: 4.5em; 
-    margin-top: 5em;       
+    margin: 1em auto;       
     width: 50%;
 }
 .hero .cta{
@@ -351,7 +369,7 @@ nav .cart-items-display{
 }
 h1{
     padding: 0.5em 0.5em 0.1em;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 h1 .tagline{
@@ -359,7 +377,7 @@ h1 .tagline{
 }
 .hero p{
     line-height: 1.5;
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(1rem, 2.5vw, 3rem);
     padding: 0.3em;
 }
 h2{
@@ -729,7 +747,7 @@ td{
     bottom: 0;
     right: 0;
     margin: 1em;
-    width: 3%;    
+    width: 40px;    
     border: 1px solid; 
     padding: 0.5em; 
     border-radius: 50%;
