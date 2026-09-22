@@ -125,7 +125,7 @@ if(cartIsEmpty && clearCart){
 }
     
 cartContainer.addEventListener("click", () =>{
-    window.open("cart.html")
+    window.location.href = "cart.html"
 })
 
 //Total cart amount
@@ -577,7 +577,7 @@ products.forEach((product) =>{
         localStorage.setItem("productName", productName)
         localStorage.setItem("productPrice", productPrice)
         
-        window.open("product.html")
+        window.location.href = "product.html"
     })
 })
 
