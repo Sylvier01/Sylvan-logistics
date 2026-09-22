@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html,body{
+    overflow-x: hidden;
+}
 body{
     display: grid;
     grid-template-rows: auto minmax(min-content, 1fr) auto;
@@ -30,6 +33,7 @@ header{
 @media(max-width : 768px){
     
     header .header-style-1{
+        flex-wrap: wrap;
         width: 100%;
         height: auto;  
         position: relative;
@@ -63,9 +67,10 @@ header{
         border-bottom: none;
     }
     nav .right-aligned-nav{
-        display: flex;
+        gap: 8px;
         align-items: start;
-        margin-right: 0.5em;
+        margin: 0.3em;
+        flex-wrap: wrap;
     }
     nav .contact-buttons{
         flex-direction: column;
@@ -110,17 +115,27 @@ header{
         margin: 1em auto;
     }
     .productPage-image{
-        margin-left: 2em;
+        width: 90%;
+        max-width: 320px;
+        margin: 1em auto;
+    }
+    table{
+        width: 100%;
+        min-width: 480px;
     }
     .cart-section{
         flex-direction: column;
         justify-content: space-evenly;
         gap: 2em;
     }
+    .cart-html h1{
+        font-size: clamp(1.5rem, 10vw, 2rem);
+        word-break: break-word;
+    }
     .cart-list-section{
-        /* width: 70%; */
-        margin-right: auto;
-        margin-left: 1em;
+        width: auto;
+        overflow-x: auto;
+        margin: 0 auto;
         padding: 0em 1em;
     }
     .cart-order-section{
@@ -137,9 +152,16 @@ header{
     }
     .upper-footer{
         flex-direction: column;
-        align-items: center;
+        width: 90%;
+        max-width: 320px;
+        /* text-align: center; */
         gap: 1em;
     }    
+    .contact,
+    .footer-product-categories{
+        /* margin: 0 auto; */
+        margin: 1em;
+    }
 }
 .header-style-1{
     /* box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 2px 0px rgba(0, 0, 0, 0.06); */
@@ -404,7 +426,7 @@ h2{
     margin-bottom: 0;
 }
 .cart-html h1{
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 8vw, 3rem);
     text-align: center;
     text-decoration: underline;
     text-transform: uppercase;
