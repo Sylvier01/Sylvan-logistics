@@ -140,9 +140,6 @@ header{
         justify-content: space-evenly;
         gap: 2em;
     }
-    .cart-html h1{
-        font-size: clamp(1.5rem, 10vw, 2rem) !important;
-    }
     .cart-html h2{
         font-size: clamp(1rem, 10vw, 1.8rem) !important;
         text-transform: uppercase;
@@ -157,9 +154,6 @@ header{
     .cart-section .cart-order-section{
         margin: 0 auto;
         /* width: 60%; */
-    }
-    .order h2{
-        text-decoration: underline;
     }
     .contact .contact-buttons{
         flex-direction: column;
@@ -470,6 +464,7 @@ h1 .tagline{
     text-decoration: underline;
     text-transform: uppercase;
     margin-bottom: 1em;
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
 }
 .cart-section{
     display: flex;
@@ -616,57 +611,74 @@ td{
     width: 15px;
 }
 .cart-btn{
-     margin: 1em auto;
-     transition: transform 0.5s ease;
-     width: 60%;
-     border: 1px solid;
-     background-color: rgb(128, 243, 222, 0.1);
-     font-weight: bold;
+     margin: 0.5em auto 0;
+     transition: transform 0.25s ease, box-shadow 0.25s ease;
+     width: 100%;
+     border: 1px solid #d8d8d8;
+     border-radius: 8px;
+     background-color: white;
+     color: #1a1a1a;
+     font-weight: 700;
+     font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+     padding: 0.6em;
+     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 .cart-btn:hover{
-    transform: scale(1.02);
-    background-color: rgb(128, 243, 222, 0.4)
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #fafafa;
 }
 .cart-btn a{    
-    color:black;   
+    color: #1a1a1a;   
 }
 .products-container{
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.5em;
-    margin: 0 auto;    
+    gap: 1.2em;
+    margin: 1em auto;  
+    padding: 0 1em;  
 }
 .product{
-    border: 1px solid #ccc;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
     background-color: white;
     color: black;
-    width: fit-content;
-    padding: 0.5em;
+    width: 100%;
+    padding: 1em;
     text-align: center;
-    transition: transform 0.5s ease;
-    box-shadow: 1px 1px 0.5px rgb(204, 204, 204, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 .product:hover{
-    box-shadow: 2px 2px 3px rgb(204, 204, 204);
-    transform: scale(1.02);
-    /* background-color: rgb(230, 246, 244); */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
 }
 .product-image{
-    width: 50%;
-    object-fit: cover;    
-    transition: transform 0.5s ease;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;  
+    border-radius: 8px;
+    background-color: #fafafa;  
+    margin-bottom: 0.5em;
 }
 .product-image:hover{
     transform: scale(1.04);
 }
 .product h3{
-    font-size: clamp(1rem, 5vw, 1.3rem);
-    color: rgb(61, 129, 49);
+    font-size: clamp(0.95rem, 4vw, 1.2rem);
+    color: rgb(40, 100, 35);  
+    margin: 0.3em 0;
+    min-height: 2.4em;
 }
 .price{
-    margin-top: 0.5em;
     font-size: clamp(1rem, 5vw, 1.2rem);
     font-weight: 800;
+    color: #1a1a1a;
+    margin: 0.3em 0 0.6em;
 }
 .cart{
     width: 50%;
@@ -677,24 +689,31 @@ td{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.4em;
     border-radius: 50px;
-    margin: 0 auto;
-    padding: 0.2em;
-    background-color: rgb(128, 243, 222);
+    margin: 0.5em auto 0;
+    padding: 0.6em;
+    width: 100%;
+    background-color: rgb(37, 211, 102);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease;
+
 }
 .order-by-whatsapp:hover{
-    background-color: rgb(134, 255, 233);  
-    transform: scale(1.01);
+    background-color: rgb(29, 190, 88); 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 .whatsapp-cta-link{
     font-weight: bold;
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+    color: white;
     text-align: center;
 }
 .whatsapp-icon,
 .phone-icon,
 .categories-icon{
-    width: 30px;
+    width: 22px;
 }
 .product-description{
     display: none;
@@ -742,7 +761,7 @@ td{
     background-color: rgb(255, 255, 255, 0.5);
 }
 .order h2{
-    font-size: 2rem;
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
     text-decoration: underline;
     text-align: left;
     margin-bottom: 1em;
@@ -806,7 +825,7 @@ td{
 }
 .productPage-price{
     font-weight: bold;
-    font-size: clamp();
+     font-size: clamp(1.3rem, 5vw, 1.8rem);
     text-align: center;
     padding-top: 0;
     padding-bottom: 0;
