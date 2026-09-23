@@ -11,20 +11,16 @@
     <header class="right-slide">
         <nav>
             <ul class="header-style-1">
-                <li class="logo">
+                <!-- <li class="logo"> -->
+                
                     <img src="./assets/logo/Sylvan Logistics logo -black bg.png" alt="placeholder logo" class="logo-image">
-                </li>                
-                <div class="left-aligned-nav">       
-                    <li>
-                        <a href="index.html#home">Home</a>
-                    </li>          
-                    <li class="all-products-container">
-                        <a href="#All-products">All Products</a>
-                    </li>
 
-                    <li class="nav-item-container">
+                    <li class="categories-container">
                         <div class="nav-and-icon">                    
-                            <a href="#Categories" class="second-nav-list-item">Categories</a>
+                            <a href="#Categories" class="categories-link">
+                                <img class="categories-icon" src="/assets/icon/categories.png" alt="">
+                                <span class="categories-text">Categories</span>
+                            </a>
                             <img src="assets/icon/down-arrow.png" alt="down-arrow" class="down-arrow">
                             <img src="assets/icon/up-arrow.png" alt="up-arrow" class="up-arrow">   
                         </div>
@@ -33,24 +29,36 @@
                             <li class="drop-menu-item"><a href="#Pesticides">Pesticides</a></li>
                             <li class="drop-menu-item"><a href="#Ferilizers">Fertilizers</a></li>
                         </ul> 
-                    </li>                    
+                    </li>    
+                                
+                <div class="left-aligned-nav">       
+                    <li>
+                        <a href="index.html#home">Home</a>
+                    </li>          
+                    <li class="all-products-container">
+                        <a href="#All-products">All Products</a>
+                    </li>
+                                    
                     <li><a href="#About">About</a></li>
                     <!-- <li><a href="#Testimonials">Testimonials</a></li> -->
                 </div>
                 
                 <div class="right-aligned-nav">
 
-                    <div class="contact-buttons">                
-                        <a aria-label="Chat on WhatsApp" href="https://wa.me/254701973009"> 
-                            <img class="whatsapp-contact-button" alt="Chat on WhatsApp" src="/assets/other images/ChatOnWhatsapp.png"/>
+                    <!-- <div class="contact-buttons">                
+                        <a class="whatsapp-contact-button" aria-label="Chat on WhatsApp" href="https://wa.me/254701973009"> 
+                            <img class="whatsapp-icon" alt="Chat on WhatsApp" src="/assets/icon/whatsapp.png"/>
                         </a>
-                        <a href="tel:+254792929806" class="call-us-link">Click to Call Us</a>
-                        <li class="cart-container">                        
-                            <span class="cart-items-display"></span><img src="assets/icon/shopping-cart png.png" alt="cart icon" class="cart-icon">
-                            <p>Cart</p>
-                        </li>
-                    </div> 
-                    
+                        <a href="tel:+254792929806">
+                            <img class="phone-icon" src="/assets/icon/phone.png" alt="phone-icon">
+                        </a>                        
+                    </div>  -->
+
+                    <li class="cart-container">                        
+                        <span class="cart-items-display"></span><img src="assets/icon/shopping-cart png.png" alt="cart icon" class="cart-icon">
+                        <p>Cart</p>
+                    </li>
+
                     <img class="menu-icon" src="./assets/icon/menu icon.png" alt="menu-icon">
                 </div>
                 
@@ -63,28 +71,29 @@
 
             <video class="hero-video hero-styling" autoplay loop muted
                     poster="/assets/website background images/JPG/farm bg2.jpg">
-                <source src="/assets/video/hero-video-1-720.mp4" type="video/mp4">
+                <source src="/assets/video/hero-video-1-240.mp4" type="video/mp4">
             </video>  
             <div class="hero-content">
                 <h1 class="fade-slide-in hero-styling">Sylvan Logistics
-                    <span>
+                    <!-- <span>
                         <p class="animated-paragraph tagline">Your friendly neighbourhood agro-dealer.</p>
-                    </span>
+                    </span> -->
                 </h1>                
                 <p class="animated-paragraph hero-styling">We scout the supplier base for what you need, so you don't have to!
                 </p>
-                <button class="cta"><a href="#Contact">Click to make enquiries</a></button>
+                <button class="hero-cta"><a href="#Contact">Click to make enquiries</a></button>
             </div>
+            
         </section>
         
         <section class="All-products-container">
             <h2 id="All-products">
                 ALL PRODUCTS <span class="sum-of-all-products"></span>                                     
             </h2>
-            <p>If you don't find what you need below, <a href="#Contact">Call</a> or  <a href="#Contact">WhatsApp</a> us to enquire on it.</p>
+            
         </section>        
         
-        <section id="Fungicides">
+        <section id="Fungicides" class="categories-styling">
         
             <h2>FUNGICIDES</h2>
 
@@ -106,7 +115,7 @@
                         <div class="cart-cta-link"><a href="#Add To Cart">Add To Cart</a></div>
                     </button>
                     
-                    <button class="cta nav-and-icon order-by-whatsapp">
+                    <button class="order-by-whatsapp">
                         <img src="assets/icon/whatsapp.png" alt="cart icon" class="whatsapp-icon">
                         <a class="whatsapp-cta-link">Order on WhatsApp</a>                 
                     </button>           
@@ -128,7 +137,7 @@
                         <div class="cart-cta-link"><a href="#Add To Cart">Add To Cart</a></div>
                     </button>
                     
-                    <button class="cta nav-and-icon order-by-whatsapp">
+                    <button class="order-by-whatsapp">
                         <img src="assets/icon/whatsapp.png" alt="cart icon" class="whatsapp-icon">
                         <a class="whatsapp-cta-link">Order on WhatsApp</a>                 
                     </button>
@@ -150,7 +159,7 @@
                         <a href="#Add To Cart" class="cart-cta-link">Add To Cart</a>
                     </button>
                     
-                    <button class="cta nav-and-icon order-by-whatsapp">
+                    <button class="order-by-whatsapp">
                         <img src="assets/icon/whatsapp.png" alt="cart icon" class="whatsapp-icon">
                         <a class="whatsapp-cta-link">Order on WhatsApp</a>                 
                     </button>
@@ -173,7 +182,7 @@
                         <div class="cart-cta-link"><a href="#Add To Cart">Add To Cart</a></div>
                     </button>
                     
-                    <button class="cta nav-and-icon order-by-whatsapp">
+                    <button class="order-by-whatsapp">
                         <img src="assets/icon/whatsapp.png" alt="cart icon" class="whatsapp-icon">
                         <a class="whatsapp-cta-link">Order on WhatsApp</a>                 
                     </button>
