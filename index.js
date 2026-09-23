@@ -1,5 +1,6 @@
 
-import productPageData from "./productPageData.js"
+import hardwareProducts from "./productPageData.js"
+console.log(hardwareProducts.length)
 
 const active = document.querySelector(".active")
 const navItems = document.querySelectorAll("nav li")
@@ -156,7 +157,7 @@ if(document.querySelector(".cart-table-content")){
             </td>
 
             <td>
-                <img src="${product.image}">
+                <img src="${product.image}" class="table-product-image">
             </td>
 
             <td>
@@ -173,7 +174,6 @@ if(document.querySelector(".cart-table-content")){
             <td>
                 <img 
                     src="assets/icon/recycle-bin.png" 
-                    style = "width:30px"
                     class = "recycle-bin">
             </td>
         `
