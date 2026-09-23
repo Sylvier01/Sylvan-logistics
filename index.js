@@ -477,7 +477,9 @@ products.forEach((product) =>{
 
         //display current quantity
         if(existingProduct){
-            cartBtn.textContent = existingProduct.quantity
+            cartBtn.innerHTML = `
+            <img src="assets/icon/shopping-cart png.png" alt="cart icon" class="cart-icon">
+            ${existingProduct.quantity}`
         }
 
         cartBtn.addEventListener("click", (event) =>{
